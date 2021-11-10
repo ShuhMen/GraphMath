@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/LSM/app/src/main/res/drawable-night/res_shape.xml" value="0.22870370370370371" />
+        <entry key="..\:/Android/LSM/app/src/main/res/drawable/button_shape.xml" value="0.2324074074074074" />
+        <entry key="..\:/Android/LSM/app/src/main/res/drawable/button_shape_right.xml" value="0.22314814814814815" />
+        <entry key="..\:/Android/LSM/app/src/main/res/drawable/ic_baseline_list_24.xml" value="0.14322916666666666" />
+        <entry key="..\:/Android/LSM/app/src/main/res/drawable/launch_screen.xml" value="0.225" />
+        <entry key="..\:/Android/LSM/app/src/main/res/drawable/launch_screen_night.xml" value="0.22685185185185186" />
+        <entry key="..\:/Android/LSM/app/src/main/res/drawable/res_shape.xml" value="0.22870370370370371" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout-night/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout-night/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout-night/add_value.xml" value="0.536" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout-night/results.xml" value="0.45627376425855515" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout/add_value.xml" value="0.536" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout/add_value_view.xml" value="0.25" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout/item_of_list.xml" value="0.25" />
+        <entry key="..\:/Android/LSM/app/src/main/res/layout/results.xml" value="0.3265720081135903" />
+        <entry key="..\:/Android/LSM/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="..\:/Android/LSM/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.23055555555555557" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

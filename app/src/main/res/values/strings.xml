@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GraphMath</string>
+    <string name="calculate">Вычислить</string>
+    <string name="add_value">Добавить точку</string>
+    <string name="add_x">Введите x</string>
+    <string name="add_y">Введите y</string>
+    <string name="add">Добавить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete_value">Удалить точку</string>
+    <string name="result">Результат</string>
+    <string name="res_a">а = </string>
+    <string name="res_da">△a = </string>
+    <string name="res_b">b = </string>
+    <string name="res_db">△b = </string>
+    <string name="res_rxy">Rxy = </string>
+    <string name="res_sx2">Sx2 = </string>
+    <string name="res_sy2">Sy2 = </string>
+</resources>
