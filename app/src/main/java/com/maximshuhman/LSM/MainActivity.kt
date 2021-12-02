@@ -2,7 +2,10 @@ package com.maximshuhman.LSM
 
 import android.content.res.ColorStateList
 import android.os.Bundle
-import android.view.*
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -17,18 +20,19 @@ class MainActivity : AppCompatActivity() {
     lateinit var CalcButton: Button
     lateinit var AddValue: Button
     lateinit var DelButton: Button
+    lateinit var EmptyText: TextView
+
 
     var mode: Boolean = false
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.bottom_menu, menu)
-        return true
-    }
+
+
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
-        updateUI(ValueList.data)
+            updateUI(ValueList.data)
+
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,48 +49,59 @@ class MainActivity : AppCompatActivity() {
         ValuesRecyclerView.layoutManager = LinearLayoutManager(this)
 
         CalcButton.setOnClickListener{
-            var sx = 0.0
-            var sx2 = 0.0
 
-            var sy = 0.0
-            var sy2= 0.0
+            if(ValueList.data.size != 0) {
+                var sx = 0.0
+                var sx2 = 0.0
 
-            var spr = 0.0
+                var sy = 0.0
+                var sy2 = 0.0
+
+                var spr = 0.0
 
 
-            for(i in 0 until ValueList.data.size) {
-                sx += ValueList.data[i].first
-                sy += ValueList.data[i].second
+                for (i in 0 until ValueList.data.size) {
+                    sx += ValueList.data[i].first
+                    sy += ValueList.data[i].second
 
-                sx2 += ValueList.data[i].first * ValueList.data[i].first
-                sy2 += ValueList.data[i].second * ValueList.data[i].second
+                    sx2 += ValueList.data[i].first * ValueList.data[i].first
+                    sy2 += ValueList.data[i].second * ValueList.data[i].second
 
-                spr += ValueList.data[i].first * ValueList.data[i].second
+                    spr += ValueList.data[i].first * ValueList.data[i].second
+                }
+                val dx = sx / ValueList.data.size
+                val dy = sy / ValueList.data.size
+
+                val Sx2 =
+                    sx2 / ValueList.data.size - (sx / ValueList.data.size) * (sx / ValueList.data.size)
+                val Sy2 =
+                    sy2 / ValueList.data.size - (sy / ValueList.data.size) * (sy / ValueList.data.size)
+                val Rxy = spr / ValueList.data.size - dx * dy
+
+                val a = Rxy / Sx2
+                val b = (sy - a * sx) / ValueList.data.size
+
+                val da = 2 * sqrt((1 / (1.0 * (ValueList.data.size - 2))) * ((Sy2 / Sx2) - a * a))
+                val db = da * sqrt(sx2 / (1.0 * ValueList.data.size))
+
+                val dialog = ResDialog.newInstance(
+                    if (!a.isNaN()) a else 0.0,
+                    if (!b.isNaN()) b else 0.0,
+                    if (!Rxy.isNaN()) Rxy else 0.0,
+                    if (!da.isNaN()) da else 0.0,
+                    if (!db.isNaN()) db else 0.0,
+                    if (!Sx2.isNaN()) Sx2 else 0.0,
+                    if (!Sy2.isNaN()) Sy2 else 0.0
+                )
+
+                dialog.show(this.supportFragmentManager, "ADD_OG")
+            }else
+            {
+                val toast = Toast(applicationContext)
+                toast.setText( "Введите данные")
+                toast.setGravity(Gravity.TOP, 0, 0)
+                toast.show()
             }
-                val dx = sx/ ValueList.data.size
-                val dy = sy/ ValueList.data.size
-
-                val Sx2 = sx2/ ValueList.data.size - (sx/ ValueList.data.size)*(sx/ ValueList.data.size)
-                val Sy2 = sy2/ ValueList.data.size - (sy/ ValueList.data.size)*(sy/ ValueList.data.size)
-                val Rxy = spr/ValueList.data.size - dx*dy
-
-                val a = Rxy/Sx2
-                val b = (sy- a*sx)/ValueList.data.size
-
-                val da = 2*sqrt((1 /(1.0* (ValueList.data.size - 2))) * ((Sy2 / Sx2) - a*a))
-                val db = da * sqrt (sx2 / (1.0 *ValueList.data.size))
-
-            val dialog = ResDialog.newInstance(
-                if(!a.isNaN())   a   else 0.0,
-                if(!b.isNaN())   b   else 0.0,
-                if(!Rxy.isNaN()) Rxy else 0.0,
-                if(!da.isNaN())  da  else 0.0,
-                if(!db.isNaN())  db  else 0.0,
-                if(!Sx2.isNaN()) Sx2 else 0.0,
-                if(!Sy2.isNaN()) Sy2 else 0.0)
-
-            dialog.show(this.supportFragmentManager, "ADD_OG")
-
         }
 
         AddValue.setOnClickListener {
@@ -123,6 +138,13 @@ class MainActivity : AppCompatActivity() {
 
     fun updateUI(data:ArrayList<Pair<Double, Double>>){
         ValuesRecyclerView.adapter = ValuesAdapter(data)
+        EmptyText = findViewById(R.id.empty_text)
+        if(ValueList.data.size != 0) {
+            EmptyText.visibility = View.GONE
+        }
+        else{
+            EmptyText.visibility = View.VISIBLE
+        }
     }
 
 
