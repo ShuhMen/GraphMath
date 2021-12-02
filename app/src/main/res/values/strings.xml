@@ -16,7 +16,12 @@
     <string name="res_sx2">Sx2 = </string>
     <string name="res_sy2">Sy2 = </string>
     <string name="settings">Настройки</string>
-    <string name= "empty_list">Введите результаты измерений</string>
+    <string name="night">Темная тема</string>
+    <string name="day">Светлая тема</string>
+    <string name="pink">True fisics</string>
+    <string name="empty_list">Введите результаты измерений</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
