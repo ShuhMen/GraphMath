@@ -20,15 +20,21 @@ class ResDialog : DialogFragment() {
         val t10: TextView = view.findViewById(R.id.textView10)
         val t12: TextView = view.findViewById(R.id.textView12)
         val t14: TextView = view.findViewById(R.id.textView14)
+        val t19: TextView = view.findViewById(R.id.textView19)
+        val t21: TextView = view.findViewById(R.id.textView21)
 
 
-        t2.text = requireArguments().getDouble("A").toString()
-        t4.text = requireArguments().getDouble("B").toString()
-        t6.text = requireArguments().getDouble("RXY").toString()
-        t8.text = requireArguments().getDouble("DA").toString()
-        t10.text = requireArguments().getDouble("DB").toString()
-        t12.text = requireArguments().getDouble("SX2").toString()
-        t14.text = requireArguments().getDouble("SY2").toString()
+
+        t2.text =  String.format( "%.5f", requireArguments().getDouble("A"))
+        t4.text =  String.format( "%.5f", requireArguments().getDouble("B"))
+        t6.text =  String.format( "%.5f", requireArguments().getDouble("RXY"))
+        t8.text =  String.format( "%.5f",  requireArguments().getDouble("DA"))
+        t10.text = String.format("%.5f", requireArguments().getDouble("DB"))
+        t12.text = String.format("%.5f", requireArguments().getDouble("SX2"))
+        t14.text = String.format("%.5f", requireArguments().getDouble("SY2"))
+        t19.text = String.format("%.5f", requireArguments().getDouble("EA"))
+        t21.text = String.format("%.5f", requireArguments().getDouble("EB"))
+
         return builder.create()
     }
 
@@ -40,7 +46,9 @@ class ResDialog : DialogFragment() {
             da: Double,
             db: Double,
             sx2: Double,
-            sy2: Double
+            sy2: Double,
+            ea: Double,
+            eb: Double
         ): ResDialog {
             val args = Bundle().apply {
                 putDouble("A", a)
@@ -50,6 +58,8 @@ class ResDialog : DialogFragment() {
                 putDouble("DB", db)
                 putDouble("SY2", sy2)
                 putDouble("SX2", sx2)
+                putDouble("EA", ea)
+                putDouble("EB", eb)
             }
             return ResDialog().apply {
                 arguments = args

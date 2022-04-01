@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        Utils.onActivityCreateSetTheme(this);
+
 
         ValuesRecyclerView = findViewById(R.id.val_recycler_view)
         CalcButton = findViewById(R.id.calc_button)
@@ -81,6 +81,9 @@ class MainActivity : AppCompatActivity() {
                 val da = 2 * sqrt((1 / (1.0 * (ValueList.data.size - 2))) * ((Sy2 / Sx2) - a * a))
                 val db = da * sqrt(sx2 / (1.0 * ValueList.data.size))
 
+                val ea = da/a
+                val eb = db/b
+
                 val dialog = ResDialog.newInstance(
                     if (!a.isNaN()) a else 0.0,
                     if (!b.isNaN()) b else 0.0,
@@ -88,7 +91,9 @@ class MainActivity : AppCompatActivity() {
                     if (!da.isNaN()) da else 0.0,
                     if (!db.isNaN()) db else 0.0,
                     if (!Sx2.isNaN()) Sx2 else 0.0,
-                    if (!Sy2.isNaN()) Sy2 else 0.0
+                    if (!Sy2.isNaN()) Sy2 else 0.0,
+                    if (!ea.isNaN()) ea else 0.0,
+                    if (!eb.isNaN()) eb else 0.0
                 )
 
                 dialog.show(this.supportFragmentManager, "ADD_OG")
