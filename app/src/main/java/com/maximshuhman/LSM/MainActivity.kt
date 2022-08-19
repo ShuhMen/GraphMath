@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+            // setSupportActionBar(findViewById(R.id.toolbar))
 
 
 
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+  /*  override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
         menuInflater.inflate(R.menu.app_bar_menu, menu)
         return super.onCreateOptionsMenu(menu)
@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
+*/
     fun updateUI(data:ArrayList<Pair<Double, Double>>){
         ValuesRecyclerView.adapter = ValuesAdapter(data)
         EmptyText = findViewById(R.id.empty_text)

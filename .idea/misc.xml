@@ -25,15 +25,26 @@
         <entry key="..\:/Android/LSM/app/src/main/res/menu/app_bar_menu.xml" value="0.25" />
         <entry key="..\:/Android/LSM/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
         <entry key="..\:/Android/LSM/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.23055555555555557" />
-        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout-night/activity_main.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable-night/res_shape.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable/button_shape_left.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable/button_shape_right.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable/ic_baseline_list_24.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable/ic_settings.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable/launch_screen.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable/launch_screen_night.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/drawable/res_shape.xml" value="0.313" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout-night/activity_main.xml" value="0.3854166666666667" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout-night/add_value.xml" value="0.3854166666666667" />
         <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout-night/results.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout/activity_main.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout/activity_main.xml" value="0.3854166666666667" />
         <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout/activity_settings.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout/activity_splash.xml" value="0.22708333333333333" />
-        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout/add_value.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout/add_value.xml" value="0.3854166666666667" />
         <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout/item_of_list.xml" value="0.4" />
         <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/layout/results.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/menu/app_bar_menu.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/Maxim Shuhman/StudioProjects/GraphMath/app/src/main/res/menu/bottom_menu.xml" value="0.425" />
       </map>
     </option>
   </component>
